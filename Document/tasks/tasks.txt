@@ -1,0 +1,10 @@
+DATE: 26-7-23
+
+Today's Tasks :- i. Changed the validations from custom to Joi validations.
+                ii. Did the correct Formatting of the code.
+               iii. Made some changes in the Reset and Forget Password related to jwt token removed them from the code.
+                iV. 
+
+DATE : 28-07-2023
+
+Today's Tasks  : i. 

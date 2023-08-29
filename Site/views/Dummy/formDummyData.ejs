@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    body {
+        background-color : rgb(212, 212, 195);
+    }
+    .container {
+        margin : 30px auto;
+        width : 80%;
+        height : 600px;
+        background-color:rgb(255, 255, 255);
+    }
+    .item-1 {
+        display: inline-block;
+        position:relative;
+       top : 10px;
+       right:-10px;
+    }
+    .item-2 {
+        float:right;
+        position:relative;
+       top : 10px;
+       right:20px;
+    }
+    #submit{
+        display: inline-block;
+        position:relative;
+        right:-10px;
+    }
+
+   .filterdata{
+        display: inline-block;
+        position : relative;
+        top : 10px;
+        left: 200px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="item-1" >
+            <label for="Search">Search Bar : </label>
+            <input id="Search" type="text" value="" placeholder="Search.." name="Search">
+            <button id = "submit" type="button">Submit</button>
+        </div>
+
+        <div class = "filterdata">
+            <button id="submitBoth" type="button"> Submit By Both </button>
+        </div>
+
+        <div class="item-2">
+            <label for="Start">StartDate :</label>
+            <input type="date" id="Start" name="Start">&nbsp;
+               TO
+            &nbsp; <label for="End"> EndDate : </label>
+            <input type="date" id="End" name="End">
+            <button id = "submitDates" type="button">Submit</button>
+        </div>
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+</body>
+<script>
+
+    $(document).ready(function() {
+       $("#submitDates").click(function() {
+          var StartDate = document.getElementById('Start').value;
+          var EndDate = document.getElementById('End').value;
+          if(StartDate == "" &&  EndDate == "" ) {
+              alert("please Enter the values first");
+          }
+          else {
+              console.log( "Dates" + EndDate +StartDate);
+              $.ajax ({ 
+                  url: '/dateFilter',
+                  type: 'POST',
+                  cache: false, 
+                  data : { 
+                     StartDate : StartDate,
+                     EndDate :  EndDate
+                       },
+                  success: function( csvData ) {
+                      alert("CSV created");
+                        console.log(csvData)
+                //   CSVFile = new Blob([csvData], {
+                //   type : "text/csv"
+                //   });
+                //   var temp_link = document.createElement('a');
+                //   temp_link.download = "DummyDates.csv";
+                //   var url = window.URL.createObjectURL(CSVFile);
+                //   temp_link.href = url;
+                //   temp_link.style.display = "none";
+                //   document.body.appendChild(temp_link);
+                //   temp_link.click();
+                //   document.body.removeChild(temp_link);
+               },
+                   error: function(jqXHR, textStatus, err) {
+                      console.log('text status '+textStatus+', err '+err);
+                  }
+                 })
+              }
+      });
+   });
+   
+   </script>
+
+<script>
+     $(document).ready( function() {
+         $("#submit").click(function(){
+            var searchVal = document.getElementById( 'Search' ).value;
+           
+            if(searchVal == "" ) {
+                alert("please the values first");
+            }
+            else {
+                console.log( "SearchVal" + searchVal)
+                $.ajax({ 
+                    url: '/search',
+                    type: 'POST',
+                    cache: false, 
+                    data: { Search : searchVal },
+                    success: function( csvData ) {
+                        alert("CSV created"); 
+                          console.log(csvData)
+                    // CSVFile = new Blob([csvData], {
+                    // type: "text/csv"
+                    // });
+                    // var temp_link = document.createElement('a');
+                    // temp_link.download = "Dummy.csv";
+                    // var url = window.URL.createObjectURL(CSVFile);
+                    // temp_link.href = url;
+                    // temp_link.style.display = "none";
+                    // document.body.appendChild(temp_link);
+                    // temp_link.click();
+                    // document.body.removeChild(temp_link);
+            },
+                     error: function(jqXHR, textStatus, err) {
+                        console.log('text status '+textStatus+', err '+err);
+                    }
+                   })
+                }
+        });
+    
+    });
+</script>
+
+<script>
+    $(document).ready( function() {
+        $("#submitBoth").click(function(){
+           var searchVal = document.getElementById( 'Search' ).value;
+           let StartDate = document.getElementById('Start').value;
+           var EndDate = document.getElementById('End').value;
+           console.log(StartDate + EndDate + searchVal);
+           if(searchVal == "" && (StartDate == "" || EndDate == "") ) {
+               alert("please Enter the values first");
+           }
+           else {
+              console.log( "SearchVal" + searchVal + StartDate + EndDate);
+               $.ajax({ 
+                   url: '/filterAggre',
+                   type: 'POST',
+                   cache: false, 
+                   data: { 
+                        Search : searchVal,
+                        StartDate : StartDate,
+                        EndDate : EndDate
+                    },
+                   success: function( csvData ) {
+                       alert("CSV created"); 
+                         console.log(csvData)
+                    },
+                    error: function(jqXHR, textStatus, err) {
+                       console.log('text status '+textStatus+', err '+err);
+                   }
+                  })
+               }
+       });
+   
+   });
+</script>
+
+
+</html>

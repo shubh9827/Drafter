@@ -1,0 +1,11 @@
+rollno,name,age,branch,address,courseFee,hobbies,dob
+3,Shreya,13,entc,"{""city"":""pune"",""state"":""mh""}",100,"badminton, tennis",Mon Jan 26 2004 05:30:00 GMT+0530 (India Standard Time)
+20,kush,19,cse,"{""city"":""kanpur"",""state"":""up""}",100,,Sun May 09 2004 05:30:00 GMT+0530 (India Standard Time)
+16,vikas,19,it,"{""city"":""jodhpur"",""state"":""rajasthan""}",100,,Sun May 16 2004 05:30:00 GMT+0530 (India Standard Time)
+11,karan,19,cse,"{""city"":""ajmer"",""state"":""rajasthan""}",100,,Fri May 21 2004 05:30:00 GMT+0530 (India Standard Time)
+5,Neha,10,civil,"{""city"":""nasik"",""state"":""mh""}",100,"cooking, books, drawing",Sat Jul 24 2004 05:30:00 GMT+0530 (India Standard Time)
+19,ayush,19,ece,"{""city"":""shimla"",""state"":""hp""}",100,,Thu Aug 26 2004 05:30:00 GMT+0530 (India Standard Time)
+17,surya,19,mechanical,"{""city"":""jaipur"",""state"":""rajasthan""}",100,,Sun Oct 24 2004 05:30:00 GMT+0530 (India Standard Time)
+1,Shivam,19,comp,"{""city"":""pune"",""state"":""mh""}",100,"badminton, books",Sat Oct 30 2004 05:30:00 GMT+0530 (India Standard Time)
+18,pranav,19,civil,"{""city"":""jabalpur"",""state"":""mp""}",100,,Sun Jan 30 2005 05:30:00 GMT+0530 (India Standard Time)
+14,arnav,19,ee,"{""city"":""ajmer"",""state"":""rajasthan""}",100,,Fri Feb 18 2005 05:30:00 GMT+0530 (India Standard Time)

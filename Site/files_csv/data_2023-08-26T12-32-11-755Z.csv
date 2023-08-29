@@ -1,0 +1,16 @@
+rollno,name,age,branch,address,courseFee,hobbies,department.departmentName,department.hod
+3,Shreya,13,entc,"{""city"":""pune"",""state"":""mh""}",100,"[""badminton"",""tennis""]",entc,jack
+5,Neha,10,civil,"{""city"":""nasik"",""state"":""mh""}",100,"[""cooking"",""books"",""drawing""]",civil,rajesh
+5,Neha,10,civil,"{""city"":""nasik"",""state"":""mh""}",100,"[""cooking"",""books"",""drawing""]",civil,rajesh
+1,Shivam,19,comp,"{""city"":""pune"",""state"":""mh""}",100,"[""badminton"",""books""]",comp,kim
+18,pranav,19,civil,"{""city"":""jabalpur"",""state"":""mp""}",100,undefined,civil,rajesh
+18,pranav,19,civil,"{""city"":""jabalpur"",""state"":""mp""}",100,undefined,civil,rajesh
+14,arnav,19,ee,"{""city"":""ajmer"",""state"":""rajasthan""}",100,undefined,ee,sivan
+4,Sneha,21,mech,"{""city"":""nasik"",""state"":""mh""}",100,"[""basketball"",""books""]",mech,sam
+7,Sumit,12,civil,"{""city"":""nagpur"",""state"":""mh""}",100,"[""singing"",""cooking"",""dancing""]",civil,rajesh
+7,Sumit,12,civil,"{""city"":""nagpur"",""state"":""mh""}",100,"[""singing"",""cooking"",""dancing""]",civil,rajesh
+2,Kavita,19,entc,"{""city"":""banglore"",""state"":""karnataka""}",100,"[""tennis"",""books"",""cooking""]",entc,jack
+8,Richa,19,comp,"{""city"":""mumbai"",""state"":""mh""}",100,"[""badminton"",""books"",""cooking"",""dancing""]",comp,kim
+9,Atharv,21,mech,"{""city"":""banglore"",""state"":""karnataka""}",100,"[""badminton"",""dancing""]",mech,sam
+10,Nishant,19,entc,"{""city"":""pune"",""state"":""mh""}",100,"[""tennis"",""dancing""]",entc,jack
+6,Riya,21,entc,"{""city"":""mumbai"",""state"":""mh""}",100,"[""badminton"",""dancing""]",entc,jack
